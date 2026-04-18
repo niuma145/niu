@@ -2,28 +2,14 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<title>牛马的爱心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱心</title>
 <style>
 *{margin:0;padding:0;}
-html,body{width:100%;height:100%;overflow:hidden;background:#000;}
-iframe{width:100%;height:100%;border:none;}
-.load{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:99;}
+body,iframe{width:100vw;height:100vh;border:0;}
 </style>
 </head>
 <body>
-<div class="load" id="mask"></div>
-<iframe id="ifr" sandbox="allow-scripts allow-forms allow-popups allow-top-navigation"></iframe>
-
-<script>
-const iframe = document.getElementById('ifr');
-const mask = document.getElementById('mask');
-
-iframe.src = "http://a.u9c.cn/6qyDll";
-
-iframe.onload = function(){mask.style.display='none';}
-iframe.onerror = function(){mask.style.display='block';}
-</script>
+<iframe src="http://a.u9c.cn/6qyDll"></iframe>
 </body>
 </html>
