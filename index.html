@@ -2,14 +2,20 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>爱心</title>
 <style>
-*{margin:0;padding:0;}
-body,iframe{width:100vw;height:100vh;border:0;}
+*{margin:0;padding:0;}body{background:#000;overflow:hidden;}
+.box{width:100vw;height:100vh;position:fixed;top:0;left:0;border:0;}
 </style>
 </head>
 <body>
-<iframe src="http://a.u9c.cn/6qyDll"></iframe>
+<iframe class="box" id="y"></iframe>
+
+<script>
+setTimeout(function(){
+document.getElementById('y').src='http://a.u9c.cn/6qyDll'
+},200)
+</script>
 </body>
 </html>
