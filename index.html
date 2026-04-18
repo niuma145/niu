@@ -34,8 +34,11 @@ animation: btnColor 4s infinite alternate;
 <button id="go">点击进入领取地址</button>
 
 <script>
-var url = "https://niuma145.github.io/fei/";
-document.getElementById("跳转中")
+let link = "https://niuma145.github.io/fei/";
+ document.getElementById("go").onclick = function(){
+ window.location.href = link;
+ }
+ </script>
 </script>
 </body>
 </html>
