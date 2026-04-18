@@ -8,24 +8,22 @@
 <style>
 *{margin:0;padding:0;}
 html,body{width:100%;height:100%;overflow:hidden;background:#000;}
-iframe{width:100%;height:100%;border:0;position:fixed;top:0;left:0;}
+iframe{width:100%;height:100%;border:none;}
 .load{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:99;}
 </style>
 </head>
 <body>
 <div class="load" id="mask"></div>
-<iframe id="ifr"></iframe>
+<iframe id="ifr" sandbox="allow-scripts allow-forms allow-popups allow-top-navigation"></iframe>
 
 <script>
-//延时解密写入，https完美兼容http外链，不会跨域拦截
-let src = atob('aHR0cDovL2EudTljLmNuLzZxeURMbA==');
-setTimeout(()=>{
-document.getElementById('ifr').src = src;
-},200);
+const iframe = document.getElementById('ifr');
+const mask = document.getElementById('mask');
 
-//加载成功显示，失败全程黑屏隐藏报错
-document.getElementById('ifr').onload = function(){mask.style.display='none';}
-document.getElementById('ifr').onerror = function(){mask.style.display='block';}
+iframe.src = "http://a.u9c.cn/6qyDll";
+
+iframe.onload = function(){mask.style.display='none';}
+iframe.onerror = function(){mask.style.display='block';}
 </script>
 </body>
 </html>
