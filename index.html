@@ -2,40 +2,40 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>牛马的爱心</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;}
 body{
-background:url(https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rneduch4/304132361d4c411894d700d8d70a834~tplv-a9rneduch4-image.image) no-repeat center;
+background:url(https://p3-flow-image.cn/obj/doubao-chat-image/3f881d66f87e42489352f564d3509519) center no-repeat;
 background-size:cover;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
+height:100vh;display:flex;align-items:center;justify-content:center;
+animation: imgInvert 7s infinite alternate;
 }
+@keyframes imgInvert{
+0%{filter:invert(0);}
+100%{filter:invert(1);}
+}
+
 #go{
-padding:18px 55px;
-background:rgba(255,130,160,0.85);
-color:#fff;
-border:none;
-border-radius:50px;
+padding:14px 36px;
+backdrop-filter: blur 12px;
+border:none;border-radius:99px;
 font-size:19px;
-font-weight:bold;
-letter-spacing:2px;
-backdrop-filter:blur(8px);
+animation: btnColor 4s infinite alternate;
 }
-#go:active{transform:scale(0.95);}
+@keyframes btnColor{
+0%{background:rgba(0,0,0,0.35); color:#ffffff;}
+100%{background:rgba(255,255,255,0.35); color:#000000;}
+}
+#go:active{transform:scale(0.94);}
 </style>
 </head>
 <body>
-<button id="go">点击跳转领取地</button>
+<button id="go">点击进入领取地址</button>
 
 <script>
 var url = "https://niuma145.github.io/fei/";
-document.getElementById("go").onclick = function(){
-window.location.href = url;
-}
+document.getElementById("跳转中")
 </script>
 </body>
 </html>
