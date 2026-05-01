@@ -1,16 +1,185 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<title>牛马的爱心</title>
-<style>
-*{margin:0;padding:0;}
-html,body,iframe{width:100%;height:100%;border:none;overflow:hidden;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自取爱心 - 已失效</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* 顶部搜索栏 */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #1a1a1a;
+            border-radius: 50px;
+            padding: 12px 20px;
+            margin-bottom: 40px;
+            border: 1px solid #333;
+        }
+
+        .search-icon, .warn-icon {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #ccc;
+        }
+
+        .search-text {
+            flex: 1;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .star-icon {
+            font-size: 20px;
+            color: #ffcc00;
+            margin-right: 15px;
+        }
+
+        .tool-box {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* 任务信息标题 */
+        .task-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #9381ff;
+            margin-bottom: 20px;
+        }
+
+        /* 订单号框 */
+        .order-id {
+            background-color: #2a2a3a;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            color: #b0b0c0;
+            font-size: 16px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* 领取统计 */
+        .stat-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e0e0ff;
+            border-left: 4px solid #9381ff;
+            padding-left: 10px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1e1e2e;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .stat-label {
+            color: #cccccc;
+        }
+
+        .stat-value {
+            font-weight: bold;
+        }
+
+        .stat-value.valid {
+            color: #639bff;
+        }
+
+        .stat-value.num {
+            color: #639bff;
+            font-size: 22px;
+        }
+
+        /* 红色提示文字 */
+        .red-tip {
+            color: #ff4444;
+            font-size: 16px;
+            margin: 20px 0;
+            line-height: 1.6;
+            padding: 0 5px;
+        }
+
+        /* 渐变按钮 */
+        .btn-get {
+            width: 100%;
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ffcc00, #9381ff);
+            color: #000;
+            margin: 25px 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<iframe src="http://zqax.42ku.cn//task/?cami=tsdjv9vsh22gb26gn4ivc2xts9cfgyow" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"></iframe>
+    <!-- 顶部搜索栏 -->
+    <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <span class="warn-icon">⚠️</span>
+        <span class="search-text">自取爱心</span>
+        <span class="star-icon">⭐</span>
+        <span class="tool-box">设置</span>
+    </div>
+
+    <!-- 任务信息 -->
+    <div class="task-title">任务信息</div>
+
+    <!-- 订单状态 -->
+    <div class="order-id">订单状态异常</div>
+
+    <!-- 领取统计 -->
+    <div class="stat-title">领取统计</div>
+
+    <div class="stat-item">
+        <span class="stat-label">网站状态</span>
+        <span class="stat-value valid">异常无效</span>
+    </div>
+
+    <div class="stat-item">
+        <span class="stat-label">爱心总数</span>
+        <span class="stat-value num">0</span>
+    </div>
+
+    <div class="stat-item">
+        <span class="stat-label">剩余数量</span>
+        <span class="stat-value num">-99</span>
+    </div>
+
+    <!-- 红色提示 -->
+    <div class="red-tip">
+        爱心已经失效！无法领取
+    </div>
+
+    <button class="btn-get" id="getBtn">点击退出</button>
+
+    <script>
+        document.getElementById('getBtn').addEventListener('click', function(){
+            window.close();
+        });
+    </script>
 </body>
 </html>
